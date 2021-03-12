@@ -129,3 +129,4 @@ final_fits
 
 require(semTools)
 reliability(fit$ml)
+reliability(fit$wls)
