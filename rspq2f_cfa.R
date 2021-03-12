@@ -11,7 +11,7 @@ require(matrixStats)
 require(lavaan) # version 0.6-6
 
 # Set working directory. Must contain R-SPQ-2F item response data.
-setwd("C:/...")
+setwd("C:/Users/avagnoz/Dropbox/Clemson/ESED/GRA/SPQ_CFA/R_CFA_Script/")
 rm(list=ls())
 
 # Read in the R-SPQ-2F item-level responses.
@@ -126,3 +126,6 @@ standardizedSolution(fit$wlsno2)
 # Final Fit Indices
 final_fits <- sapply(fit, function(X) get_fits(X))
 final_fits
+
+require(semTools)
+reliability(fit$ml)
